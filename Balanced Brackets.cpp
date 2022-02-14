@@ -9,7 +9,8 @@ while(n--){
     cin>>c;
     for(int i = 0; i<c.length();i++){
         cout<<i<<" " ;
-        
+        cout<<endl;
+
     }
 }
 }
