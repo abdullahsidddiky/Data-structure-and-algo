@@ -10,6 +10,7 @@ while(n--){
     for(int i = 0; i<c.length();i++){
         cout<<i<<" " ;
         cout<<endl;
+        cout<<endl;
     }
 }
 }
