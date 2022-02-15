@@ -52,4 +52,5 @@ int main(){
     cin>>position;
     deletenode(&head,position);
     print(head);
+    
 }
