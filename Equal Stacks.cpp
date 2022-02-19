@@ -3,6 +3,7 @@ using namespace std;
 void insertatbottom(stack <int> &s, int key){
     if(s.empty()){
         s.push(key);
+        return;
     }
     int  temp = s.top();
     s.pop();
