@@ -1,108 +1,84 @@
 #include <bits/stdc++.h>
 using namespace std;
-void insertatbottom(stack <int> &s, int key){
-    if(s.empty()){
-        s.push(key);
-        return;
-    }
-    int  temp = s.top();
-    s.pop();
-    insertatbottom(s,key);
-    s.push(temp);
-
-}
-void reversestack(stack <int> &s){
-    if(s.empty()){
-        return;
-    }
-
-    int temp = s.top();
-    s.pop();
-    reversestack(s);
-    insertatbottom(s,temp);
-}
-void sumstack(stack <int> &s,int &sum){
-    if (s.empty() ==  true){
-        return;
-    }
-
-    int temp = s.top();
-    s.pop();
-    sumstack(s,sum);
-    sum+=temp;
-    s.push(sum);
-
-}
 
 int main(){
     stack<int> s1,s2,s3;
     int n1,n2,n3;
-    int v;
-    int sum = 0;
 cin>>n1;
 cin>>n2;
 cin>>n3;
-while(n1--){
-    cin>>v;
-    s1.push(v);
+int arr1[n1],arr2[n2],arr3[n3];
+
+
+for(int i =0;i<n1;i++){
+    cin>>arr1[i];
 }
-while(n2--){
-    cin>>v;
-    s2.push(v);
+for(int i =0;i<n2;i++){
+    cin>>arr2[i];
 }
-
-while(n3--){
-    cin>>v;
-    s3.push(v);
+for(int i =0;i<n3;i++){
+    cin>>arr3[i];
 }
-
-reversestack(s1);
-reversestack(s2);
-reversestack(s3);
-
+/*
+int sum = 0;
+for(int i =n1-1;i>=0;i--){
+    sum+=arr1[i];
+    s1.push(sum);
+}
 sum=0;
-sumstack(s1,sum);
-//cout<<sum<<endl;
-sum=0;
-sumstack(s2,sum);
-//cout<<sum<<endl;
-sum=0;
-sumstack(s3,sum);
-//cout<<sum<<endl;
-int flag =1;
 
-while(s1.empty() == false && s2.empty() ==false && s3.empty() ==false){
-    if(s1.top() > s2.top() && s1.top() > s3.top()){
+for(int i =n2-1;i>=0;i--){
+    sum+=arr2[i];
+    s2.push(sum);
+}
+sum = 0;
+for(int i =n3-1;i>=0;i--){
+    sum+=arr3[i];
+    s3.push(sum);
+
+}
+int h1,h2,h3;
+/*
+while(s1.empty() == false){
+    cout<<s1.top()<<" ";
+    s1.pop();
+}
+cout<<endl;
+
+while(s2.empty() == false){
+    cout<<s2.top()<<" ";
+    s2.pop();
+}
+cout<<endl;
+while(s3.empty() == false){
+    cout<<s3.top()<<" ";
+    s3.pop();
+}
+*/
+
+//while(s1.empty() == false || s2.empty() ==false ||  s3.empty() ==false){
+while(1){
+       if(s3.empty() == true ||  s3.empty()==true || s2.empty()==true){
+       cout<< "0"<<endl;
+       break;
+       // return 0;
+    }
+    h1 = s1.top();
+    h2= s2.top();
+    h3 = s3.top();
+    if(h1 == h2 && h1 == h3){
+        cout<<h3<<endl;
+        break;
+    }
+    if(h1> h2 && h1 > h3){
         s1.pop();
-        if(s1.top() == s2.top() && s1.top() == s3.top()){
-            cout<<s1.top()<<endl;
-            break;
-        }
     }
-    else if(s2.top() > s1.top() && s2.top()>s3.top()){
+    else if(h2 > h1 && h2 > h3){
         s2.pop();
-         if(s1.top() == s2.top() && s1.top() == s3.top()){
-            cout<<s1.top()<<endl;
-            break;
-        }
     }
-    else if(s3.top() > s1.top() && s3.top()>s2.top()){
+    else if(h3 >h1 && h3 > h2){
         s3.pop();
-         if(s1.top() == s2.top() && s1.top() == s3.top()){
-            cout<<s1.top()<<endl;
-            break;
-        }
     }
-    else if(s3.empty() == true ||  s3.empty()==true || s2.empty()==true){
-        cout<<"0"<<endl;
-        break;
-    }
-    else{
-        cout<<s1.top()<<endl;
-        break;
-    }
-
-
 
 }
 
