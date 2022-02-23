@@ -7,6 +7,7 @@ int main(){
 cin>>n1;
 cin>>n2;
 cin>>n3;
+//int sum =0;
 int arr1[n1],arr2[n2],arr3[n3];
 
 
@@ -19,7 +20,7 @@ for(int i =0;i<n2;i++){
 for(int i =0;i<n3;i++){
     cin>>arr3[i];
 }
-/*
+
 int sum = 0;
 for(int i =n1-1;i>=0;i--){
     sum+=arr1[i];
