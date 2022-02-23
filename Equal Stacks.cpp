@@ -71,13 +71,13 @@ while(1){
         cout<<h3<<endl;
         break;
     }
-    if(h1> h2 && h1 > h3){
+    if(h1>= h2 && h1 >= h3){
         s1.pop();
     }
-    else if(h2 > h1 && h2 > h3){
+    else if(h2 >= h1 && h2 >= h3){
         s2.pop();
     }
-    else if(h3 >h1 && h3 > h2){
+    else if(h3 >=h1 && h3 >= h2){
         s3.pop();
     }
 
