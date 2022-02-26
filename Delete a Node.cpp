@@ -32,7 +32,7 @@ void deletenode(Node** head_ref, int position){
         *head_ref = node->next;
         return;
     }
-    for(int i = 1; i < position;i++){
+    for(int i=1;i<position;i++){
         node=node->next;
     }
 
@@ -44,7 +44,7 @@ int main(){
     int n;
     int data;
     cin>>n;
-    for(int i = 0; i<n;i++){
+    for(int i=0; i<n;i++){
         cin>>data;
         push(&head,data);
     }
