@@ -1,28 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-int n;
-cin>>n;
-//int arr[n];
-float positive=0;
-float negative=0;
-float zero=0;
-float value;
-for(int i = 0; i<n;i++){
-    cin>>value;
-    if(value > 0){
+  vector <int> v;
+  int a;
+  int n;
+  cin>>n;
+  float positive=0;
+  float negative=0;
+  float zero=0;
+  for(int i=0;i<n;i++){
+    cin>>a;
+    if(a>0){
         positive++;
-        cout<<positive<<endl;
     }
-    else if(value<0){
+    else if(a<0){
         negative++;
     }
-    else {
+    else{
         zero++;
     }
-}
-cout <<fixed<<setprecision(6)<<positive/n<<endl;
-cout <<fixed<<setprecision(6)<<negative/n<<endl;
-cout <<fixed<<setprecision(6)<<zero/n<<endl;
-}
 
+  }
+      cout<<positive/n<<endl;
+    cout<<negative/n<<endl;
+    cout<<zero/n<<endl;
+
+
+}
