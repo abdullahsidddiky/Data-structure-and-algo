@@ -8,7 +8,7 @@ int main(){
         cin>>a[i];
     }
     sort(a,a+n);
-    int avg=0;
+    float avg=0;
     for(int i =1;i<n-1;i++){
         avg+=a[i];
     }
