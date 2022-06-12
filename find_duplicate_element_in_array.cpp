@@ -15,7 +15,7 @@ int main(){
     }
    }
    cout<<endl<<endl;
-    sort(m);
+  
    for(auto i=m.begin();i!=m.end();i++){
     if(i->second >1){
         cout<<i->first<< " ";
