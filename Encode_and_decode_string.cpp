@@ -12,7 +12,6 @@ string encode(vector<string> &s){
 
 string decode(string s){
     string l="";
-    int num;
     string s_d="";
     for(int i=0;i<s.size();i++){
         if(s[i] != '#' && s[i]>='0' && s[i]<='9'){
@@ -29,7 +28,7 @@ string decode(string s){
 }
 
 int main(){
-   vector <string> s={"abdullah","siddiky","#"};   
+   vector <string> s={"abdullah","siddiky","#","#","."};   
     string encoded=encode(s);
     cout<<"encoded string: "<<encoded<<endl;
     decode(encoded);
