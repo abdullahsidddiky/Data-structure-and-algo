@@ -33,6 +33,12 @@ void print(Node* head){
     cout<<head->data<<" ";
     print(head->right);
 }
+void leftview(Node* head, int data){
+    if(head==NULL){
+        return;
+    }
+    leftview
+}
 
 int main(){
  Node* head = NULL;
