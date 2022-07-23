@@ -5,9 +5,26 @@ int main(){
     string s;
     getline(cin,s);
     int max=0;
-    int s=0;
-    int e=0;
-    while(1){
-         
+    int start=0;
+    int end=0;
+    while (start<s.size())
+    {
+        auto it = sets.find(s[start]);
+        if(it==sets.end()){
+            sets.insert(s[start]);
+            if(start-end+1 > max){
+                max= start-end+1;
+            }
+            start++;
+        }
+        else{
+            sets.erase(s[end]);
+            end++;
+        }
+        
+    
     }
+        cout<<max<<endl;
+    
+   
 }
