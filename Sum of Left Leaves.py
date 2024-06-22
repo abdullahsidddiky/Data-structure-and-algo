@@ -9,10 +9,9 @@ class Solution:
         left =0 
         if not root:
             return 0
-        if root.left:
-            if not root.left.left and not root.left.right:
-                left += root.left.val
-        else:
-            left +=  self.sumOfLeftLeaves(root.left)
-        left +=  self.sumOfLeftLeaves(root.right)
-        return left
+        if root.left and root.left.left is None and root.left.right is None:
+            left+= root.left.val
+        left+=self.sumOfLeftLeaves(root.left)
+        left +=self.sumOfLeftLeaves(root.right) 
+
+        return left 
