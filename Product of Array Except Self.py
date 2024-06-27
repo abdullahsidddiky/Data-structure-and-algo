@@ -1,10 +1,21 @@
-import speedtest
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        left_prod=[0]*len(nums)
+        right_prod=[0]*len(nums)
+        right_mul=1
+        left_mul=1
+        # print(left_prod)
+        for i in range(len(nums)):
+            j = -i-1
+            left_prod[i]=left_mul
+            right_prod[j]= right_mul
+            left_mul*=nums[i]
+            right_mul*=nums[j]
+            # print(nums[j])
+            # print(j)
+        return [l*r  for l, r in zip(left_prod, right_prod)]
 
-st = speedtest.Speedtest()
-download_speed = st.download()
-upload_speed = st.upload()
-ping = st.results.ping
 
-print(f"Download speed: {download_speed / 1_000_000} Mbps")
-print(f"Upload speed: {upload_speed / 1_000_000} Mbps")
-print(f"Ping: {ping} ms")
+
+        
+        
