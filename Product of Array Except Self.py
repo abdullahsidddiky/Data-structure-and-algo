@@ -15,7 +15,23 @@ class Solution:
             # print(j)
         return [l*r  for l, r in zip(left_prod, right_prod)]
 
+# space complexity O(1)
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        prod_arr = [0]*len(nums)
+        mul = 1
+        for i in range(len(nums)):
+            prod_arr[i] = mul
+            mul*=nums[i]
+        print(prod_arr)
+        mul = 1
+        for i in range(len(nums)):
+            j = -i-1
+            prod_arr[j] *= mul 
+            mul*= nums[j]
+        return prod_arr
 
+        
 
         
         
